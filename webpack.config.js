@@ -6,11 +6,13 @@ module.exports = {
     'webpack/hot/only-dev-server',
     './src/index.js',
   ],
+
   output: {
     path: __dirname,
     publicPath: '/',
     filename: 'bundle.js',
   },
+
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
   ],
@@ -21,12 +23,14 @@ module.exports = {
     'react/lib/ExecutionEnvironment': true,
     'react/lib/ReactContext': true,
   },
+
   module: {
     loaders: [
       {
         test: /\.js$/,
         loaders: ['react-hot', 'babel'], exclude: /node_modules/,
       },
+
       {
         test: /\.css$/,
         loaders: [
