@@ -16,7 +16,7 @@ export default class SearchBar extends Component {
       <div>
         <input
           value={this.props.value}
-          onChange={(e) => this.props.changeValueFunction(e)}
+          onChange={(e) => this.props.changeValueFunction(e.target.value)}
           placeholder={placeholder}
         />
         <button onClick={() => this.props.clearInput()}>Search</button>
